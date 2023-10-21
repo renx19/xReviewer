@@ -8,7 +8,7 @@ import Flashcards from "./Pages/Flashcards"; // Updated import path
 import Footer from "./Pages/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Quiz from "./Pages/Quiz";
 
@@ -43,14 +43,14 @@ function App() {
               setSelectedPage={setSelectedPage}
             />
           )}
-      <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/home" element={<Home />} />
-  <Route path="/flashcards" element={<Flashcards />} />
-  <Route path="/ToDoApp" element={<ToDoApp />} />
-  <Route path="/Notes" element={<Notes />} />
-  <Route path="/Quiz" element={<Quiz />} />
-  </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/flashcards" element={<Flashcards />} />
+            <Route path="/ToDoApp" element={<ToDoApp />} />
+            <Route path="/Notes" element={<Notes />} />
+            <Route path="/Quiz" element={<Quiz />} />
+          </Routes>
         </div>
       </div>
     </Router>
