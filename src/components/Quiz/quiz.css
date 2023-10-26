@@ -1,25 +1,26 @@
-
-
 :root {
-  --body_background-color: #F0F8FF;
+  --body_background-color: #f0f8ff;
   --body_color: rgb(33, 150, 150);
-  --siderbar_active:  rgb(222, 221, 221);
-  
-  
+  --siderbar_active: rgb(222, 221, 221);
 }
-[data-theme='dark'] {
+[data-theme="dark"] {
   --body_background-color: #333333;
   --body_color: #58c7d3;
   --siderbar_active: #f8f8f8;
 }
 
+.quiz {
+  margin-top: 10rem;
+  height: 130vh;
+}
 
 /* GLOBAL STYLES */
 .score-section {
   color: var(--body_color);
 }
 
-.top-nav, .quiz-body {
+.top-nav,
+.quiz-body {
   display: flex;
   flex-direction: column; /* Stack the items vertically */
   align-items: center; /* Center horizontally */
@@ -30,29 +31,31 @@
   margin: 0 auto; /* Center horizontally within the page */
   background-color: var(--body_background-color);
 }
-.quiz-btn{
+.quiz-btn {
   padding-left: 10px;
 }
 
-.form-group, .form-btn, .form-group label {
+.form-group,
+.form-btn,
+.form-group label {
   margin: 10px 0;
   color: var(--body_color);
 }
-#Number-of-Items{
+#Number-of-Items {
   width: 25px;
   text-align: center;
   font-weight: bold;
 }
 
-select{
- font-weight: bold;
+select {
+  font-weight: bold;
 }
 
 .question-count {
   padding: 10px;
   color: var(--body_color);
 }
-.question-text{
+.question-text {
   padding-bottom: 10px;
   color: var(--body_color);
 }
@@ -63,8 +66,9 @@ select{
 .answer-section button {
   padding: 10px;
   border: 3px solid var(--body_color);
- min-width: 300px;
-margin-top: 10px; 
+  min-width: 300px;
+  margin-top: 10px;
+  color: var(--body_color);
 }
 /* Add these styles to your CSS file */
 .correct {
@@ -78,33 +82,31 @@ margin-top: 10px;
   color: white;
   cursor: not-allowed; /* Disable cursor for selected answers */
 }
-.answer-option{
+.answer-option {
   display: flex;
   flex-direction: column;
- 
 }
-.answer-option span{
+.answer-option span {
   padding-top: 10px;
-  color:  #5cb85c;
+  color: #5cb85c;
 }
-
 
 @media screen and (max-width: 450px) {
-  .top-nav, .quiz-body {
-   width: 100%;  
+  .top-nav,
+  .quiz-body {
+    width: 100%;
   }
-  .form-group{
+  .form-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  #Number-of-Items{
+  #Number-of-Items {
     width: 25px;
     text-align: center;
   }
 
-  .form-btn{
-
+  .form-btn {
   }
 }

@@ -4,7 +4,8 @@ import {IoMdCloseCircle} from 'react-icons/io';
 import {BiEdit} from 'react-icons/bi';
 import {BiTrash} from 'react-icons/bi';
 import {GiSpeaker} from 'react-icons/gi';
-
+import {BiSkipPreviousCircle} from 'react-icons/bi';
+import {BiSkipNextCircle} from 'react-icons/bi';
 
 const FlashcardApp = () => {
   const [question, setQuestion] = useState('');
@@ -150,7 +151,7 @@ const FlashcardApp = () => {
     
     
   return (
-    <div className="container">
+    <div className="body-container">
     <div className="add-flashcard-con">
       <button onClick={() => setIsAddCardVisible(true)}>Add Flashcard</button>
     </div>
@@ -181,8 +182,8 @@ const FlashcardApp = () => {
       
       </div>
       <div className="slider-button">
-            <button className="prev-btn" onClick={scrollLeft}>Previous</button>
-            <button className="next-btn" onClick={scrollRight}>Next</button>
+            <BiSkipPreviousCircle className="prev-btn" onClick={scrollLeft}/>
+            <BiSkipNextCircle className="next-btn" onClick={scrollRight}/> 
           </div>
     </div>
 

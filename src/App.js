@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Quiz from "./Pages/Quiz";
+import "../src/index.css"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");

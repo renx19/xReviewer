@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   darkMode: "class",
   mode: "jit",
   theme: {
@@ -38,9 +38,7 @@ module.exports = {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
-      content: {
-        brush: "url('./src/assets/brush.png)",
-      },
+  
     },
     screens: {
       xs: "480px",

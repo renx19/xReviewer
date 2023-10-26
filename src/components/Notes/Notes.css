@@ -5,21 +5,17 @@
 }
 
 :root {
-  --body_background-color: #F0F8FF;
+  --body_background-color: #f0f8ff;
   --body_color: rgb(33, 150, 150);
-  --siderbar_active:  rgb(222, 221, 221);
-  
-  
+  --siderbar_active: rgb(222, 221, 221);
 }
-[data-theme='dark'] {
+[data-theme="dark"] {
   --body_background-color: #333333;
   --body_color: #58c7d3;
   --siderbar_active: #f8f8f8;
 }
 
 /* GLOBAL STYLES */
-
-
 
 body,
 .App {
@@ -31,7 +27,6 @@ body,
   font-size: 16px;
   margin-top: 8rem;
   overflow: hidden;
-
 }
 
 button {
@@ -42,10 +37,10 @@ button {
   font-size: inherit;
   font-family: inherit;
   cursor: pointer;
-  color: var(--body_color)
+  color: var(--body_color);
 }
 button:hover {
-  color: var(--body_color)
+  color: var(--body_color);
 }
 
 .App {
@@ -53,9 +48,8 @@ button:hover {
   margin-bottom: 1px;
 }
 
-h1{
-  color: var(--body_color)
-
+h1 {
+  color: var(--body_color);
 }
 
 /* SIDEBAR STYLES */
@@ -69,7 +63,6 @@ h1{
   overflow: hidden;
 }
 
-
 .app-sidebar input {
   width: 120px;
   overflow: hidden;
@@ -80,8 +73,7 @@ h1{
   display: flex;
   justify-content: space-between;
   padding: 25px;
-  border-bottom:  1px solid var(--body_color);
- 
+  border-bottom: 1px solid var(--body_color);
 }
 .app-sidebar-header h1 {
   margin: 0;
@@ -95,37 +87,31 @@ h1{
   scrollbar-width: none;
   white-space: nowrap;
 }
-.app-sidebar-notes::-webkit-scrollbar{
+.app-sidebar-notes::-webkit-scrollbar {
   display: none;
 }
-
 
 .app-sidebar-note {
   padding: 25px;
   cursor: pointer;
-    color: var(--body_color);
-      white-space: nowrap;
-
-    
+  color: var(--body_color);
+  white-space: nowrap;
 }
 .sidebar-note-title {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-
 }
 .trash {
   color: crimson;
   height: 32px;
   width: 32px;
-
 }
 
 .app-sidebar-header svg {
   color: var(--body_color);
   height: 32px;
   width: 32px;
-
 }
 
 .app-sidebar-note p {
@@ -153,29 +139,25 @@ h1{
   height: 82vh;
   border: 3px solid var(--body_color);
   background: var(--body_background-color);
-  position: relative; 
-
+  position: relative;
 }
 
-  
-
-.app-main-note-edit{
+.app-main-note-edit {
   height: 80vh;
   padding: 20px;
   gap: 3.5em;
- 
-
+  color: var(--body_color);
 }
-.app-main-note-edit svg{
+.app-main-note-edit svg {
   width: 32px;
   height: 32px;
   color: var(--body_color);
   left: 0;
-  float:right;
+  float: right;
 }
 
-.app-main-note-edit::-webkit-scrollbar{
-display: none;
+.app-main-note-edit::-webkit-scrollbar {
+  display: none;
 }
 
 .no-active-note {
@@ -188,17 +170,20 @@ display: none;
   background-color: var(--body_background-color);
   border: 3px solid var(--body_color);
 }
+.preview-title {
+  font-size: 30px;
+}
 
 /* Editing */
-.note-area{ 
-  background-color: #F0F8FF;
+.note-area {
+  background-color: #f0f8ff;
   gap: 3rem;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  min-height: 60vh;
+  min-height: 65vh;
   height: auto;
- 
+  padding: 5px;
 }
 .preview-title {
   overflow-x: scroll;
@@ -219,8 +204,8 @@ display: none;
   display: none;
 }
 
-.note-area::-webkit-scrollbar{
-display: none;
+.note-area::-webkit-scrollbar {
+  display: none;
 }
 
 .app-main-note-edit input,
@@ -233,10 +218,9 @@ textarea {
   resize: none;
   font-size: inherit;
   font-family: inherit;
-  
 }
 
-.app-main-note-edit input textarea::-webkit-scrollbar{
+.app-main-note-edit input textarea::-webkit-scrollbar {
   display: none;
 }
 
@@ -247,19 +231,17 @@ textarea {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.app-main-note-edit input::-webkit-scrollbar{
+.app-main-note-edit input::-webkit-scrollbar {
   display: none;
 }
 
-
 /* Hide the scrollbar for WebKit-based browsers (Chrome, Safari) */
-
 
 /* Add this media query to rearrange the layout for screens 820px and below */
 @media (max-width: 1000px) {
   .App {
     flex-direction: column; /* Change flex direction to column to stack elements */
-    min-height: 50vh;
+    height: 130vh;
   }
 
   .app-sidebar {
@@ -267,54 +249,46 @@ textarea {
     height: 30vh;
   }
   .app-sidebar input {
-     width: 200px; 
-
-}
+    width: 200px;
+  }
 
   .app-sidebar-notes {
-  
     height: 230px;
-    
-} 
-.edit-button {
-  top: 15%;
- 
-}
-.app-main{
-  height: 40vh;
-}
+  }
+  .edit-button {
+    top: 15%;
+  }
+  .app-main {
+    height: 40vh;
+  }
 
-.app-main-note-edit input,
-textarea {
+  .app-main-note-edit input,
+  textarea {
+    width: 100%;
+  }
 
-  width: 100%;
- 
-}
+  .no-active-note {
+    width: 100%;
+    min-height: 45vh;
+    line-height: 75vh;
+  }
+  .app-main {
+    width: 100%;
 
-.no-active-note {
- 
-  width: 100%;
-  min-height: 65vh;
-  line-height: 75vh;
-
- 
-}
-.app-main {
-  width: 100%;
-
-  min-height: 60vh;
-  
-}
-.note-area{
-  min-height: 45vh;
+    min-height: 60vh;
+  }
+  .note-area {
+    min-height: 50vh;
+  }
 }
 
-
-}  
-
-@media (max-width: 450px) { 
-  .note-area{
-    min-height: 35vh;
+@media (max-width: 450px) {
+  .App {
+    height: 130vh;
+  }
+  .note-area {
+    min-height: 60vh;
+    padding: 5px;
   }
   #Notes h1 {
     font-size: medium;
@@ -328,29 +302,23 @@ textarea {
   .edit-button {
     top: 7%;
     right: 7%;
-   
   }
-  .app-main,  .no-active-note  {
-    min-height: 49vh;
+  .app-main,
+  .no-active-note {
+    min-height: 80vh;
   }
- 
 
   .no-active-note {
     line-height: 40vh;
     height: 49vh;
   }
   .app-sidebar input {
-    width: 180px; 
-
-} 
-  .preview-title{
+    width: 180px;
+  }
+  .preview-title {
     margin-bottom: 30px;
   }
   .app-sidebar {
-
     height: 40vh;
   }
-
 }
-  
-  
